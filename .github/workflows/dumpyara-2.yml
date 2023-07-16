@@ -33,6 +33,7 @@ jobs:
        - name: Setup Dumpyara environment
          working-directory: firmware_dumper
          run: |
+              pip3 install git+https://github.com/Juvenal-Yescas/mediafire-dl
               sudo bash setup.sh
               git config --global user.name "Sushrut1101"
               git config --global user.email "guptasushrut@gmail.com"
