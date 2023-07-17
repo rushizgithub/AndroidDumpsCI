@@ -53,12 +53,8 @@ jobs:
          run: |
               # echo "${{ secrets.GIT_TOKEN }}" > .github_token
               # echo "${{ secrets.GIT_ORG_NAME }}" > .github_orgname
-              echo "${{ secrets.GITLAB_TOKEN }}" > .gitlab_token  # Only for Gitlab
-              echo "${{ secrets.GITLAB_GROUP }}" > .gitlab_group  # Only for Gitlab
-              echo "${{ secrets.PRIV_SSH_KEY }}" > ~/.ssh/id_rsa  # Only for Gitlab
               echo "${{ secrets.BOT_TOKEN }}" > .tg_token
               echo "${{ secrets.CHAT_ID }}" > .tg_chat
-              chmod 600 ~/.ssh/id_rsa
 
        - name: Run the Extra Command
          working-directory: DumprX
