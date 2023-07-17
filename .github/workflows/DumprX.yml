@@ -41,7 +41,7 @@ jobs:
          run: |
 
               sudo bash setup.sh
-              sudo apt install -y f2fs-tools
+              sudo apt install -y f2fs-tools neofetch
               mkdir -p ~/.ssh
               ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
               ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
@@ -51,8 +51,8 @@ jobs:
        - name: Setup Config envs
          working-directory: DumprX
          run: |
-              # echo "${{ secrets.GIT_TOKEN }}" > .github_token
-              # echo "${{ secrets.GIT_ORG_NAME }}" > .github_orgname
+              echo "${{ secrets.GIT_TOKEN }}" > .github_token
+              echo "${{ secrets.GIT_ORG_NAME }}" > .github_orgname
               echo "${{ secrets.BOT_TOKEN }}" > .tg_token
               echo "${{ secrets.CHAT_ID }}" > .tg_chat
 
